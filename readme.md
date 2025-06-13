@@ -76,6 +76,15 @@ pip install -r requirements.txt
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
+5. As of now the project uses Ollama. <br>
+* Install Ollama and pull the model `deepseek-coder-v2:latest` or any model of your choice ( coding specific )
+* change the model name in `self.model = "deepseek-coder-v2:latest"` under `llm_service.py` file
+
+**Must start the ollama server**
+```bash
+ollama serve
+```
+
 The backend API will be available at `http://localhost:8000`
 
 ## Development
